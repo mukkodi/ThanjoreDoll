@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Deep warm background like aged brass -->
+    <color name="bg_deep">#1A0E05</color>
+    <!-- Gold accent -->
+    <color name="gold">#C8972B</color>
+    <!-- Dimmer gold for hints -->
+    <color name="gold_dim">#7A5A18</color>
+    <!-- Pink sari -->
+    <color name="sari_pink">#C0436A</color>
+    <!-- Green skirt -->
+    <color name="skirt_green">#3A7A4A</color>
+</resources>

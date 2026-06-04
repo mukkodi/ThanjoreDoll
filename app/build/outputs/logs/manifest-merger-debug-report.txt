@@ -1,0 +1,213 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:2:1-25:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/padmakumar/.gradle/caches/transforms-4/e7e8d115428853cd1052da80e3a1aaef/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/padmakumar/.gradle/caches/transforms-4/b6ec52506cefa57b20fc0985692c087c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/padmakumar/.gradle/caches/transforms-4/6e7343cdd02fe326affe18b3347ec99d/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:hilt-android:2.51.1] /Users/padmakumar/.gradle/caches/transforms-4/3c01a0fe29b908bf0d5818509ccdf656/transformed/hilt-android-2.51.1/AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/padmakumar/.gradle/caches/transforms-4/ea730170f9d1120a8a61cf7f64a4a83d/transformed/fragment-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] /Users/padmakumar/.gradle/caches/transforms-4/92b1c92a3ec8eef9b7af2ac7e0a8a636/transformed/activity-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/b50de1d8ca6f99b9ad2b9933d89ee53b/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/b53c20bd4513ce3b51c50ee853073d29/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/padmakumar/.gradle/caches/transforms-4/a13c37da6c50e3ffe01200be5e417f78/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/padmakumar/.gradle/caches/transforms-4/f6e512b2423c9d6cf436059afe4cd673/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/85530978958a2577c52010e4e72ed7c3/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/5bf3a6d7b026f873c3c016d243cf3364/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/0975213594627ae2d2e427a938f41906/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/a37a388654244e350366f6a6305c6dfa/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/1368a20d0cebb6b16c886c0f2491509a/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5f02c1d1ed05f3b2669cc7c27f3c3db5/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/28341aea53b4e68ad1f99b8a33598b0c/transformed/savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] /Users/padmakumar/.gradle/caches/transforms-4/3486b6555e7cebacf79095e07c306709/transformed/annotation-experimental-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/3401bea5653059b9adbd36e319209964/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/30584245473c2383af2687859f583bba/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/padmakumar/.gradle/caches/transforms-4/b8eb11992e18532664acac7791d6dff5/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/ff8256853335bbbb8157f9c5781df6a6/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/0dad47406f992ca9dc328952acc71d19/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/509953e66a71471a68e3c68995a2f8e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/077ed0d916fd3e5e0fd243ee3b81cc75/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/d38b8d646e7e2482e4bc6591831958d1/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/padmakumar/.gradle/caches/transforms-4/2e6a86ef750044aeae74fb084b963047/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] /Users/padmakumar/.gradle/caches/transforms-4/40f3562a6bc7e04e35ff1b35ccd81c72/transformed/dagger-lint-aar-2.51.1/AndroidManifest.xml:16:1-19:12
+	package
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:3:5-39
+		INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:5:5-23:19
+INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:5:5-23:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/padmakumar/.gradle/caches/transforms-4/e7e8d115428853cd1052da80e3a1aaef/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/padmakumar/.gradle/caches/transforms-4/e7e8d115428853cd1052da80e3a1aaef/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/509953e66a71471a68e3c68995a2f8e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/509953e66a71471a68e3c68995a2f8e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/077ed0d916fd3e5e0fd243ee3b81cc75/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/077ed0d916fd3e5e0fd243ee3b81cc75/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:9:9-41
+	android:roundIcon
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:10:9-48
+	android:icon
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:8:9-43
+	android:allowBackup
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:12:9-48
+	android:name
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:6:9-38
+activity#com.thanjavur.wobbledoll.MainActivity
+ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:14:9-22:20
+	android:screenOrientation
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:17:13-49
+	android:exported
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:16:13-36
+	android:name
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:15:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:18:13-21:29
+action#android.intent.action.MAIN
+ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml:20:27-74
+uses-sdk
+INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml
+INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/padmakumar/.gradle/caches/transforms-4/e7e8d115428853cd1052da80e3a1aaef/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/padmakumar/.gradle/caches/transforms-4/e7e8d115428853cd1052da80e3a1aaef/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/padmakumar/.gradle/caches/transforms-4/b6ec52506cefa57b20fc0985692c087c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/padmakumar/.gradle/caches/transforms-4/b6ec52506cefa57b20fc0985692c087c/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/padmakumar/.gradle/caches/transforms-4/6e7343cdd02fe326affe18b3347ec99d/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/padmakumar/.gradle/caches/transforms-4/6e7343cdd02fe326affe18b3347ec99d/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:hilt-android:2.51.1] /Users/padmakumar/.gradle/caches/transforms-4/3c01a0fe29b908bf0d5818509ccdf656/transformed/hilt-android-2.51.1/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.51.1] /Users/padmakumar/.gradle/caches/transforms-4/3c01a0fe29b908bf0d5818509ccdf656/transformed/hilt-android-2.51.1/AndroidManifest.xml:18:3-42
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/padmakumar/.gradle/caches/transforms-4/ea730170f9d1120a8a61cf7f64a4a83d/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/padmakumar/.gradle/caches/transforms-4/ea730170f9d1120a8a61cf7f64a4a83d/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] /Users/padmakumar/.gradle/caches/transforms-4/92b1c92a3ec8eef9b7af2ac7e0a8a636/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] /Users/padmakumar/.gradle/caches/transforms-4/92b1c92a3ec8eef9b7af2ac7e0a8a636/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/b50de1d8ca6f99b9ad2b9933d89ee53b/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/b50de1d8ca6f99b9ad2b9933d89ee53b/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/b53c20bd4513ce3b51c50ee853073d29/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/b53c20bd4513ce3b51c50ee853073d29/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/padmakumar/.gradle/caches/transforms-4/a13c37da6c50e3ffe01200be5e417f78/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/padmakumar/.gradle/caches/transforms-4/a13c37da6c50e3ffe01200be5e417f78/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/padmakumar/.gradle/caches/transforms-4/f6e512b2423c9d6cf436059afe4cd673/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/padmakumar/.gradle/caches/transforms-4/f6e512b2423c9d6cf436059afe4cd673/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/85530978958a2577c52010e4e72ed7c3/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/85530978958a2577c52010e4e72ed7c3/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/5bf3a6d7b026f873c3c016d243cf3364/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/5bf3a6d7b026f873c3c016d243cf3364/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/0975213594627ae2d2e427a938f41906/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/0975213594627ae2d2e427a938f41906/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/a37a388654244e350366f6a6305c6dfa/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/a37a388654244e350366f6a6305c6dfa/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/1368a20d0cebb6b16c886c0f2491509a/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/1368a20d0cebb6b16c886c0f2491509a/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5f02c1d1ed05f3b2669cc7c27f3c3db5/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5f02c1d1ed05f3b2669cc7c27f3c3db5/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/28341aea53b4e68ad1f99b8a33598b0c/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/28341aea53b4e68ad1f99b8a33598b0c/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] /Users/padmakumar/.gradle/caches/transforms-4/3486b6555e7cebacf79095e07c306709/transformed/annotation-experimental-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] /Users/padmakumar/.gradle/caches/transforms-4/3486b6555e7cebacf79095e07c306709/transformed/annotation-experimental-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/3401bea5653059b9adbd36e319209964/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/3401bea5653059b9adbd36e319209964/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/30584245473c2383af2687859f583bba/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/30584245473c2383af2687859f583bba/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/padmakumar/.gradle/caches/transforms-4/b8eb11992e18532664acac7791d6dff5/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/padmakumar/.gradle/caches/transforms-4/b8eb11992e18532664acac7791d6dff5/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/ff8256853335bbbb8157f9c5781df6a6/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/padmakumar/.gradle/caches/transforms-4/ff8256853335bbbb8157f9c5781df6a6/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/0dad47406f992ca9dc328952acc71d19/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/0dad47406f992ca9dc328952acc71d19/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/509953e66a71471a68e3c68995a2f8e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/509953e66a71471a68e3c68995a2f8e1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/077ed0d916fd3e5e0fd243ee3b81cc75/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/077ed0d916fd3e5e0fd243ee3b81cc75/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/d38b8d646e7e2482e4bc6591831958d1/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/padmakumar/.gradle/caches/transforms-4/d38b8d646e7e2482e4bc6591831958d1/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/padmakumar/.gradle/caches/transforms-4/2e6a86ef750044aeae74fb084b963047/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/padmakumar/.gradle/caches/transforms-4/2e6a86ef750044aeae74fb084b963047/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] /Users/padmakumar/.gradle/caches/transforms-4/40f3562a6bc7e04e35ff1b35ccd81c72/transformed/dagger-lint-aar-2.51.1/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.51.1] /Users/padmakumar/.gradle/caches/transforms-4/40f3562a6bc7e04e35ff1b35ccd81c72/transformed/dagger-lint-aar-2.51.1/AndroidManifest.xml:18:3-42
+	android:targetSdkVersion
+		INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/padmakumar/Downloads/Claude Project/WobbleDoll/app/src/main/AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/077ed0d916fd3e5e0fd243ee3b81cc75/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/padmakumar/.gradle/caches/transforms-4/077ed0d916fd3e5e0fd243ee3b81cc75/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/padmakumar/.gradle/caches/transforms-4/af7496b25230844c6fb230d966735a16/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.thanjavur.wobbledoll.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.thanjavur.wobbledoll.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/padmakumar/.gradle/caches/transforms-4/5608e3f96a7bd221bec5316a781374ba/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/padmakumar/.gradle/caches/transforms-4/a0941b64fd92a35d997b978e23a1419a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
