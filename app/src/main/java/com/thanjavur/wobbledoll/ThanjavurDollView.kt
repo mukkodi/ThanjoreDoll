@@ -3,39 +3,50 @@ package com.thanjavur.wobbledoll
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import android.view.Choreographer
+import android.view.HapticFeedbackConstants
 import android.view.MotionEvent
 import android.view.View
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 import kotlin.math.abs
 
-/**
- * Custom View that draws the Thanjavur Thalayatti Bommai (wobble doll)
- * using image resources for head, torso, and base to allow independent rotation.
- * 
- * To use images, add "doll_head", "doll_torso", and "doll_base" to your res/drawable folder.
- */
+@AndroidEntryPoint
 class ThanjavurDollView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
 ) : View(context, attrs) {
 
-    // ── Physics ──────────────────────────────────────────────────────────
-    val physics = WobblePhysics()
+    @Inject lateinit var physics: WobblePhysics
     private var animating = false
+    private var lastFrameTimeNanos: Long = 0
 
-    // ── Resources ────────────────────────────────────────────────────────
+    // Raw bitmaps decoded once from resources
     private var headBitmap: Bitmap? = null
     private var torsoBitmap: Bitmap? = null
     private var baseBitmap: Bitmap? = null
+
+    // Bitmaps pre-scaled to display size in onSizeChanged — no per-frame scaling
+    private var headScaled: Bitmap? = null
+    private var torsoScaled: Bitmap? = null
+    private var baseScaled: Bitmap? = null
+
+    // Layout geometry pre-computed in onSizeChanged — no per-frame allocation
+    private var cx = 0f
+    private var headPivotY = 0f;  private var headLeft = 0f;  private var headTop = 0f
+    private var torsoPivotY = 0f; private var torsoLeft = 0f; private var torsoTop = 0f
+    private var basePivotY = 0f;  private var baseLeft = 0f;  private var baseTop = 0f
+    private val shadowOval = RectF()
+    private val placeholderRect = RectF()
 
     init {
         loadResources()
     }
 
     private fun loadResources() {
-        // Using getIdentifier so the project still compiles even if images are missing
-        headBitmap = loadBitmap("doll_head")
+        headBitmap  = loadBitmap("doll_head")
         torsoBitmap = loadBitmap("doll_torso")
-        baseBitmap = loadBitmap("doll_base")
+        baseBitmap  = loadBitmap("doll_base")
     }
 
     private fun loadBitmap(name: String): Bitmap? {
@@ -43,14 +54,10 @@ class ThanjavurDollView @JvmOverloads constructor(
         return if (id != 0) BitmapFactory.decodeResource(resources, id) else null
     }
 
-    // ── Paints (Background & Shadow) ─────────────────────────────────────
+    // BlurMaskFilter is NOT hardware-accelerated — removed to keep GPU rendering.
+    // Plain semi-transparent oval gives a clean shadow without forcing software fallback.
     private val shadowPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = Color.parseColor("#40000000")
-        maskFilter = BlurMaskFilter(12f, BlurMaskFilter.Blur.NORMAL)
-    }
-    private val glowPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.parseColor("#30FFD700")
-        maskFilter = BlurMaskFilter(20f, BlurMaskFilter.Blur.NORMAL)
     }
     private val placeholderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = Color.parseColor("#80000000")
@@ -58,18 +65,56 @@ class ThanjavurDollView @JvmOverloads constructor(
         strokeWidth = 3f
     }
 
-    // ── Touch callback ───────────────────────────────────────────────────
     var onTouched: (() -> Unit)? = null
 
-    // ── Runnable loop ────────────────────────────────────────────────────
-    private val updateRunnable = object : Runnable {
-        override fun run() {
-            physics.update()
+    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
+        super.onSizeChanged(w, h, oldw, oldh)
+        if (w == 0 || h == 0) return
+
+        cx = w / 2f
+        val cy = h / 2f
+
+        // Pre-scale bitmaps exactly once to their display dimensions
+        headScaled  = scaleBitmap(headBitmap,  (w * 0.35f).toInt())
+        torsoScaled = scaleBitmap(torsoBitmap, (w * 0.80f).toInt())
+        baseScaled  = scaleBitmap(baseBitmap,  (w * 0.65f).toInt())
+
+        // Pre-compute pivot and top-left positions (pivotFractionY = 0 → top of image at pivot)
+        headPivotY  = cy - h * 0.54f
+        torsoPivotY = cy - h * 0.28f
+        basePivotY  = cy - h * 0.06f
+
+        headScaled?.let  { headLeft  = cx - it.width / 2f; headTop  = headPivotY  }
+        torsoScaled?.let { torsoLeft = cx - it.width / 2f; torsoTop = torsoPivotY }
+        baseScaled?.let  { baseLeft  = cx - it.width / 2f; baseTop  = basePivotY  }
+
+        val shadowY = cy + h * 0.41f
+        shadowOval.set(cx - w * 0.28f, shadowY - 12f, cx + w * 0.28f, shadowY + 12f)
+    }
+
+    private fun scaleBitmap(src: Bitmap?, targetWidth: Int): Bitmap? {
+        src ?: return null
+        if (targetWidth <= 0) return src
+        val targetHeight = (targetWidth * src.height.toFloat() / src.width).toInt()
+        return Bitmap.createScaledBitmap(src, targetWidth, targetHeight, true)
+    }
+
+    private val frameCallback = object : Choreographer.FrameCallback {
+        override fun doFrame(frameTimeNanos: Long) {
+            if (lastFrameTimeNanos == 0L) {
+                lastFrameTimeNanos = frameTimeNanos
+                Choreographer.getInstance().postFrameCallback(this)
+                return
+            }
+            val dt = ((frameTimeNanos - lastFrameTimeNanos) / 1_000_000_000f).coerceAtMost(0.033f)
+            lastFrameTimeNanos = frameTimeNanos
+            physics.update(dt)
             invalidate()
             if (!physics.isAtRest()) {
-                postDelayed(this, 16)
+                Choreographer.getInstance().postFrameCallback(this)
             } else {
                 animating = false
+                lastFrameTimeNanos = 0
             }
         }
     }
@@ -78,27 +123,25 @@ class ThanjavurDollView @JvmOverloads constructor(
         physics.applyGlobalImpulse(impulse)
         if (!animating) {
             animating = true
-            post(updateRunnable)
+            lastFrameTimeNanos = 0
+            Choreographer.getInstance().postFrameCallback(frameCallback)
         }
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
         if (event.action == MotionEvent.ACTION_DOWN) {
+            performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
             val force = if (event.x < width / 2f) -22f else 22f
-            
-            // Determine which part to animate based on touch height
-            val touchY = event.y
             when {
-                touchY < height * 0.35f -> physics.applyHeadImpulse(force)
-                touchY < height * 0.65f -> physics.applyTorsoImpulse(force)
-                else -> physics.applyBaseImpulse(force)
+                event.y < height * 0.35f -> physics.applyHeadImpulse(force)
+                event.y < height * 0.65f -> physics.applyTorsoImpulse(force)
+                else                     -> physics.applyBaseImpulse(force)
             }
-
             if (!animating) {
                 animating = true
-                post(updateRunnable)
+                lastFrameTimeNanos = 0
+                Choreographer.getInstance().postFrameCallback(frameCallback)
             }
-
             onTouched?.invoke()
             performClick()
             return true
@@ -108,82 +151,47 @@ class ThanjavurDollView @JvmOverloads constructor(
 
     override fun performClick(): Boolean { super.performClick(); return true }
 
-    // ── Drawing ───────────────────────────────────────────────────────────
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        val cx = width / 2f
-        val cy = height / 2f
-
-        // Draw articulated segments
-        drawBase(canvas, cx, cy)
-        drawTorso(canvas, cx, cy)
-        drawHead(canvas, cx, cy)
-
-        drawShadow(canvas, cx, cy)
+        drawBase(canvas)
+        drawTorso(canvas)
+        drawHead(canvas)
+        canvas.drawOval(shadowOval, shadowPaint)
     }
 
-    private fun drawBase(canvas: Canvas, cx: Float, cy: Float) {
+    private fun drawBase(canvas: Canvas) {
         canvas.save()
-        val pivotY = cy + height * -0.06f
-        canvas.rotate(physics.base.angleX, cx, pivotY)
-        val scaleY = 1.0f - (abs(physics.base.angleY) / 100f)
-        canvas.scale(1.0f, scaleY, cx, pivotY)
-
-        baseBitmap?.let {
-            drawPart(canvas, it, cx, pivotY, width * 0.65f, 0.0f)
-        } ?: drawPlaceholder(canvas, cx, pivotY + height * 0.05f, width * 0.5f, height * 0.03f)
-
+        canvas.rotate(physics.base.angleX, cx, basePivotY)
+        canvas.scale(1f, 1f - abs(physics.base.angleY) / 100f, cx, basePivotY)
+        baseScaled?.let { canvas.drawBitmap(it, baseLeft, baseTop, null) }
+            ?: run {
+                placeholderRect.set(cx - width * 0.25f, basePivotY + height * 0.02f, cx + width * 0.25f, basePivotY + height * 0.08f)
+                canvas.drawOval(placeholderRect, placeholderPaint)
+            }
         canvas.restore()
     }
 
-    private fun drawTorso(canvas: Canvas, cx: Float, cy: Float) {
+    private fun drawTorso(canvas: Canvas) {
         canvas.save()
-        val pivotY = cy - height * 0.28f
-        canvas.rotate(physics.torso.angleX, cx, pivotY)
-        val scaleY = 1.0f - (abs(physics.torso.angleY) / 100f)
-        canvas.scale(1.0f, scaleY, cx, pivotY)
-        
-        torsoBitmap?.let {
-            drawPart(canvas, it, cx, pivotY, width * 0.8f, 0.0f)
-        } ?: drawPlaceholder(canvas, cx, pivotY + height * 0.15f, width * 0.4f, height * 0.25f)
-        
+        canvas.rotate(physics.torso.angleX, cx, torsoPivotY)
+        canvas.scale(1f, 1f - abs(physics.torso.angleY) / 100f, cx, torsoPivotY)
+        torsoScaled?.let { canvas.drawBitmap(it, torsoLeft, torsoTop, null) }
+            ?: run {
+                placeholderRect.set(cx - width * 0.2f, torsoPivotY + height * 0.02f, cx + width * 0.2f, torsoPivotY + height * 0.28f)
+                canvas.drawOval(placeholderRect, placeholderPaint)
+            }
         canvas.restore()
     }
 
-    private fun drawHead(canvas: Canvas, cx: Float, cy: Float) {
+    private fun drawHead(canvas: Canvas) {
         canvas.save()
-        val pivotY = cy - height * 0.54f
-        canvas.rotate(physics.head.angleX, cx, pivotY)
-        val scaleY = 1.0f - (abs(physics.head.angleY) / 100f)
-        canvas.scale(1.0f, scaleY, cx, pivotY)
-
-        headBitmap?.let {
-            drawPart(canvas, it, cx, pivotY, width * 0.35f, 0.0f)
-        } ?: drawPlaceholder(canvas, cx, pivotY + height * 0.12f, width * 0.3f, height * 0.12f)
-
+        canvas.rotate(physics.head.angleX, cx, headPivotY)
+        canvas.scale(1f, 1f - abs(physics.head.angleY) / 100f, cx, headPivotY)
+        headScaled?.let { canvas.drawBitmap(it, headLeft, headTop, null) }
+            ?: run {
+                placeholderRect.set(cx - width * 0.15f, headPivotY + height * 0.06f, cx + width * 0.15f, headPivotY + height * 0.18f)
+                canvas.drawOval(placeholderRect, placeholderPaint)
+            }
         canvas.restore()
-    }
-
-    /**
-     * Draws a bitmap centered horizontally on cx, and anchored vertically based on pivotFractionY.
-     * pivotFractionY: 0.0 = top of image is at cy, 1.0 = bottom of image is at cy.
-     */
-    private fun drawPart(canvas: Canvas, bitmap: Bitmap, cx: Float, cy: Float, targetWidth: Float, pivotFractionY: Float) {
-        val aspectRatio = bitmap.height.toFloat() / bitmap.width.toFloat()
-        val targetHeight = targetWidth * aspectRatio
-        val left = cx - targetWidth / 2f
-        val top = cy - targetHeight * pivotFractionY
-        val dest = RectF(left, top, left + targetWidth, top + targetHeight)
-        canvas.drawBitmap(bitmap, null, dest, null)
-    }
-
-    private fun drawPlaceholder(canvas: Canvas, cx: Float, cy: Float, w: Float, h: Float) {
-        val rect = RectF(cx - w / 2f, cy - h / 2f, cx + w / 2f, cy + h / 2f)
-        canvas.drawOval(rect, placeholderPaint)
-    }
-
-    private fun drawShadow(canvas: Canvas, cx: Float, cy: Float) {
-        val shadowY = cy + height * 0.41f
-        canvas.drawOval(cx - width * 0.28f, shadowY - 12f, cx + width * 0.28f, shadowY + 12f, shadowPaint)
     }
 }

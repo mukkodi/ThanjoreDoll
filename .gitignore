@@ -1,0 +1,46 @@
+# Built artifacts
+bin/
+gen/
+out/
+release/
+[Bb]uild/
+*.apk
+*.aar
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Gradle
+.gradle/
+build.gradle.caching
+.gradle-home
+
+# Local configuration (SDK path, signing, secrets) — machine-specific
+local.properties
+keystore.properties
+*.jks
+*.keystore
+
+# Log files
+*.log
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# NDK
+obj/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

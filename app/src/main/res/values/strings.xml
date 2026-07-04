@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Thanjavur Wobble Doll</string>
+    <string name="app_title_ta">தஞ்சாவூர் பொம்மைகள்</string>
+    <string name="app_title_en">Thanjavur Dancing Dolls</string>
+    <string name="indicator_dot">◆</string>
+    <string name="hint_tap_shake">Tap the doll  •  Shake your phone</string>
 </resources>

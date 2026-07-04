@@ -39,8 +39,8 @@ class WobblePhysics @Inject constructor() {
             if (angleX < -35f) { angleX = -35f; velocityX = -velocityX * 0.2f }
             
             // Clamp Y
-            if (angleY > 20f) { angleY = 20f; velocityY = -velocityY * 0.2f }
-            if (angleY < -20f) { angleY = -20f; velocityY = -velocityY * 0.2f }
+            if (angleY > 10f) { angleY = 20f; velocityY = -velocityY * 0.2f }
+            if (angleY < -10f) { angleY = -20f; velocityY = -velocityY * 0.2f }
         }
 
         fun applyImpulse(forceX: Float, forceY: Float) {
@@ -54,9 +54,9 @@ class WobblePhysics @Inject constructor() {
     }
 
     // Individual states for each part
-    val head = PartState(stiffness = 5.5f, damping = 0.10f, inertia = 1.1f)
-    val torso = PartState(stiffness = 2.5f, damping = 0.35f, inertia = 1.0f)
-    val base = PartState(stiffness = 2.8f, damping = 0.25f, inertia = 1.5f)
+    val head = PartState(stiffness = 18.0f, damping = 1.2f, inertia = 1.1f)
+    val torso = PartState(stiffness = 12.0f, damping = 1.8f, inertia = 1.0f)
+    val base = PartState(stiffness = 15.0f, damping = 2.5f, inertia = 1.5f)
 
     /**
      * Applies impulse to a specific part only.
@@ -79,8 +79,7 @@ class WobblePhysics @Inject constructor() {
         base.applyImpulse(forceX, abs(forceX) * 0.4f)
     }
 
-    fun update() {
-        val dt = 0.016f
+    fun update(dt: Float) {
         head.update(dt)
         torso.update(dt)
         base.update(dt)

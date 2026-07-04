@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_ancient">
+
+    <!-- Page title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ஆட்டு பொம்மைகள்"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/gold_light"
+        android:fontFamily="serif"
+        android:letterSpacing="0.06"
+        android:shadowColor="@color/bg_edge"
+        android:visibility="gone"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:layout_marginTop="8dp" />
+
+    <!-- Two framed figures side by side -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- Left figure: the man rocks side to side -->
+        <com.thanjavur.wobbledoll.RockingHorseView
+            android:id="@+id/rockingMenView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/panel_niche"
+            android:clickable="true"
+            android:focusable="true"
+            app:rockImage="rocking_men"
+            app:rockMode="side" />
+
+        <!-- Right figure: the woman rocks side to side -->
+        <com.thanjavur.wobbledoll.RockingHorseView
+            android:id="@+id/rockingWomenView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/panel_niche"
+            android:clickable="true"
+            android:focusable="true"
+            app:rockImage="rocking_women"
+            app:rockMode="side" />
+
+    </LinearLayout>
+
+    <!-- Hint pill -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Tap either figure — left or right — to rock"
+        android:textSize="12sp"
+        android:textColor="@color/parchment"
+        android:letterSpacing="0.10"
+        android:visibility="gone"
+        android:background="@drawable/hint_pill"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="7dp"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>

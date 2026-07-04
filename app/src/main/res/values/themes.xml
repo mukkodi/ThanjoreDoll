@@ -2,10 +2,10 @@
 <resources>
     <style name="Theme.WobbleDoll" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/gold</item>
-        <item name="colorPrimaryDark">@color/bg_deep</item>
-        <item name="colorAccent">@color/sari_pink</item>
-        <item name="android:windowBackground">@color/bg_deep</item>
-        <item name="android:statusBarColor">@color/bg_deep</item>
-        <item name="android:navigationBarColor">@color/bg_deep</item>
+        <item name="colorPrimaryDark">@color/bg_edge</item>
+        <item name="colorAccent">@color/gold_light</item>
+        <item name="android:windowBackground">@drawable/bg_ancient</item>
+        <item name="android:statusBarColor">@color/bg_edge</item>
+        <item name="android:navigationBarColor">@color/bg_edge</item>
     </style>
 </resources>

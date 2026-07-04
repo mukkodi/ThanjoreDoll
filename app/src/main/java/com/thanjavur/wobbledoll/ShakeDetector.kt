@@ -21,9 +21,9 @@ class ShakeDetector(private val onShake: (force: Float) -> Unit) : SensorEventLi
     override fun onSensorChanged(event: SensorEvent) {
         if (event.sensor.type != Sensor.TYPE_ACCELEROMETER) return
 
-        val gX = event.values[0] / SensorManager.GRAVITY_MARS
-        val gY = event.values[1] / SensorManager.GRAVITY_MARS
-        val gZ = event.values[2] / SensorManager.GRAVITY_MARS
+        val gX = event.values[0] / SensorManager.GRAVITY_EARTH
+        val gY = event.values[1] / SensorManager.GRAVITY_EARTH
+        val gZ = event.values[2] / SensorManager.GRAVITY_EARTH
 
         val gForce = sqrt(gX * gX + gY * gY + gZ * gZ)
 

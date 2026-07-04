@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RockingHorseView">
+        <!-- Drawable name to render (e.g. "rocking_men"). Defaults to "rocking_horse1". -->
+        <attr name="rockImage" format="string" />
+        <!-- Rocking axis: side-to-side or pitching toward/away from the viewer. -->
+        <attr name="rockMode" format="enum">
+            <enum name="side" value="0" />
+            <enum name="frontBack" value="1" />
+        </attr>
+        <!-- When false, the image is shown static and does not rock on touch. -->
+        <attr name="rockEnabled" format="boolean" />
+    </declare-styleable>
+</resources>

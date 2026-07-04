@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Deep warm background like aged brass -->
+    <!-- Deep warm background like aged temple wood -->
     <color name="bg_deep">#1A0E05</color>
-    <!-- Gold accent -->
+    <!-- Slightly warmer brown for background gradient depth -->
+    <color name="bg_warm">#2E1A0C</color>
+    <!-- Darkest edge for vignette -->
+    <color name="bg_edge">#100702</color>
+
+    <!-- Temple gold accents -->
     <color name="gold">#C8972B</color>
-    <!-- Dimmer gold for hints -->
+    <!-- Bright polished gold for highlights -->
+    <color name="gold_light">#E8C468</color>
+    <!-- Dimmer gold for hints / inactive -->
     <color name="gold_dim">#7A5A18</color>
+
+    <!-- Aged parchment / ivory for readable text on dark -->
+    <color name="parchment">#EAD7A8</color>
+    <!-- Terracotta and deep maroon — classic Tanjore palette -->
+    <color name="terracotta">#A63A24</color>
+    <color name="maroon">#5C1A12</color>
+    <!-- Aged bronze patina green -->
+    <color name="patina">#4E7A63</color>
+
+    <!-- Translucent overlays for framed panels / pills -->
+    <color name="niche_fill">#331A0E05</color>
+    <color name="pill_fill">#4D000000</color>
+
     <!-- Pink sari -->
     <color name="sari_pink">#C0436A</color>
     <!-- Green skirt -->

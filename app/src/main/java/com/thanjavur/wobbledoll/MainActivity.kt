@@ -1,57 +1,57 @@
 package com.thanjavur.wobbledoll
 
-import android.hardware.Sensor
-import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var dollView: ThanjavurDollView
-    @Inject lateinit var sensorManager: SensorManager
-    private lateinit var shakeDetector: ShakeDetector
-    private var accelerometer: Sensor? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Keep screen on while playing with the doll
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-
         setContentView(R.layout.activity_main)
 
-        dollView = findViewById(R.id.dollView)
+        val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+        val dots = listOf(
+            findViewById<TextView>(R.id.dot0),
+            findViewById<TextView>(R.id.dot1),
+            findViewById<TextView>(R.id.dot2),
+            findViewById<TextView>(R.id.dot3),
+            findViewById<TextView>(R.id.dot4),
+            findViewById<TextView>(R.id.dot5),
+        )
 
-        // Touch handler feedback
-        dollView.onTouched = {
-            // Optional: add haptic feedback here
-            // dollView.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
-        }
-
-        // Shake detector setup
-        accelerometer  = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
-
-        shakeDetector = ShakeDetector { force ->
-            runOnUiThread {
-                val side = if ((0..1).random() == 0) force else -force
-                dollView.startWobble(side)
+        viewPager.adapter = object : FragmentStateAdapter(this) {
+            override fun getItemCount() = 6
+            override fun createFragment(position: Int): Fragment = when (position) {
+                0 -> TanjavurDollFragment()
+                1 -> PattiFragment()
+                2 -> ThataFragment()
+//                3 -> ConicalPendulumFragment()
+                3 -> RockingHorseFragment()
+                else -> RockingHorseFragment2()
             }
         }
-    }
+        
+        // Open to the 3rd page (ThataFragment) by default
+        viewPager.setCurrentItem(2, false)
 
-    override fun onResume() {
-        super.onResume()
-        accelerometer?.let {
-            sensorManager.registerListener(shakeDetector, it, SensorManager.SENSOR_DELAY_UI)
-        }
-    }
+        val goldColor = ContextCompat.getColor(this, R.color.gold_light)
+        val dimColor = ContextCompat.getColor(this, R.color.gold_dim)
 
-    override fun onPause() {
-        super.onPause()
-        sensorManager.unregisterListener(shakeDetector)
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                dots.forEachIndexed { index, dot ->
+                    dot.setTextColor(if (index == position) goldColor else dimColor)
+                }
+            }
+        })
     }
 }
